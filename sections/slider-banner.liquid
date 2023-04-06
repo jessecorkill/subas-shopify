@@ -1,0 +1,174 @@
+<!-- START SLIDER AREA -->
+<div class="container-fluid">
+  <div class="slider-content">
+    <div class="active-slider-1 slick-arrow-1 slick-dots-1">
+      <!-- layer-1 Start -->
+      <div class="col-lg-12">
+        <div class="layer-1">
+          <div class="slider-img">
+            {%- if section.settings.slide_one_image != blank -%}
+              {{ section.settings.slide_one_image }}
+            {% endif %}
+          </div>
+          <div class="slider-info gray-bg">
+            <div class="slider-info-inner">
+              <h1 class="slider-title-1 text-uppercase text-black-1">{{ section.settings.slide_one_heading }}</h1>
+              <div class="slider-brief text-black-2">
+                {{ section.settings.slide_one_text }}
+              </div>
+              <a href="#" class="button extra-small button-black">
+                <span class="text-uppercase">{{ section.settings.slide_one_button_text }}</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- layer-1 end -->
+      <!-- layer-1 Start -->
+      <div class="col-lg-12">
+        <div class="layer-1">
+          <div class="slider-img">
+            <img src="img/slider/slider-1/2.jpg" alt="">
+          </div>
+          <div class="slider-info gray-bg">
+            <div class="slider-info-inner">
+              <h1 class="slider-title-1 text-uppercase text-black-1">{{ section.settings.slide_two_heading }}</h1>
+              <div class="slider-brief text-black-2">
+                {{ section.settings.slide_two_text }}
+              </div>
+              <a href="#" class="button extra-small button-black">
+                <span class="text-uppercase">{{ section.settings.slide_two_button_text }}</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- layer-1 end -->
+      <!-- layer-1 Start -->
+      <div class="col-lg-12">
+        <div class="layer-1">
+          <div class="slider-img">
+            <img src="img/slider/slider-1/1.jpg" alt="">
+          </div>
+          <div class="slider-info gray-bg">
+            <div class="slider-info-inner">
+              <h1 class="slider-title-1 text-uppercase text-black-1">{{ section.settings.slide_three_heading }}</h1>
+              <div class="slider-brief text-black-2">
+                {{ section.settings.slide_three_text }}
+              </div>
+              <a href="#" class="button extra-small button-black">
+                <span class="text-uppercase">{{ section.settings.slide_three_button_text }}</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- layer-1 end -->
+    </div>
+  </div>
+</div>
+<!-- END SLIDER AREA -->
+
+{% schema %}
+  {
+    "name": "Slider Banner",
+    "tag": "div",
+    "class": "slider-area plr-185 mb-80 section",
+    "settings": [
+      {
+        "id": "slide_one_heading",
+        "type": "richtext",
+        "label": "Slide Heading",
+        "default": "<h1>Heading Here</h1>"
+      },
+      {
+        "id": "slide_one_image",
+        "type": "image_picker",
+        "label": "Slide Image"
+      },
+      {
+        "id": "slide_one_text",
+        "type": "richtext",
+        "label": "Slide Body Text",
+        "default": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>"
+      },
+      {
+        "id": "slide_one_button_text",
+        "type": "richtext",
+        "label": "Slide Button Text",
+        "default": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>"
+      }, {
+        "id": "slide_two_heading",
+        "type": "richtext",
+        "label": "Slide Heading",
+        "default": "<h1>Heading Here</h1>"
+      }, {
+        "id": "slide_two_image",
+        "type": "image_picker",
+        "label": "Slide Image"
+      }, {
+        "id": "slide_two_text",
+        "type": "richtext",
+        "label": "Slide Body Text",
+        "default": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>"
+      }, {
+        "id": "slide_two_button_text",
+        "type": "richtext",
+        "label": "Slide Button Text",
+        "default": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>"
+      }, {
+        "id": "slide_three_heading",
+        "type": "richtext",
+        "label": "Slide Heading",
+        "default": "<h1>Heading Here</h1>"
+      }, {
+        "id": "slide_three_image",
+        "type": "image_picker",
+        "label": "Slide Image"
+      }, {
+        "id": "slide_three_text",
+        "type": "richtext",
+        "label": "Slide Body Text",
+        "default": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>"
+      }, {
+        "id": "slide_three_button_text",
+        "type": "richtext",
+        "label": "Slide Button Text",
+        "default": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>"
+      }
+
+    ],
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "t:sections.image-banner.blocks.heading.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "heading",
+            "default": "Image banner",
+            "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+          }, {
+            "type": "select",
+            "id": "heading_size",
+            "options": [
+              {
+                "value": "h2",
+                "label": "t:sections.all.heading_size.options__1.label"
+              }, {
+                "value": "h1",
+                "label": "t:sections.all.heading_size.options__2.label"
+              }, {
+                "value": "h0",
+                "label": "t:sections.all.heading_size.options__3.label"
+              }
+            ],
+            "default": "h1",
+            "label": "t:sections.all.heading_size.label"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
