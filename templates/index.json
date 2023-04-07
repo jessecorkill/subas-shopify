@@ -21,7 +21,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
+            "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -37,7 +37,6 @@
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
-        "adapt_height_first_image": false,
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -50,19 +49,19 @@
     "slider_banner": {
       "type": "slider-banner",
       "settings": {
-          "slide_one_heading": "<h1>Heading Here<\/h1>",
-          "slide_one_image": "shopify:\/\/shop_images\/oscarFish.png",
-          "slide_one_text": "<p>Test<\/p>",
-          "slide_one_button_text": "<p>Click Here<\/p>",
-          "slide_two_heading": "<h1>Heading Here<\/h1>",
-          "slide_two_image": "shopify:\/\/shop_images\/oscarFish.png",
-          "slide_two_text": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,<\/p>",
-          "slide_two_button_text": "<p>Click Here<\/p>",
-          "slide_three_heading": "<h1>Heading Here<\/h1>",
-          "slide_three_image": "shopify:\/\/shop_images\/oscarFish.png",
-          "slide_three_text": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,<\/p>",
-          "slide_three_button_text": "<p>Click Here<\/p>"
-      }    
+        "slide_one_heading": "<h1>Heading Here<\/h1>",
+        "slide_one_image": "shopify:\/\/shop_images\/oscarFish.png",
+        "slide_one_text": "<p>Test<\/p>",
+        "slide_one_button_text": "<p>Click Here<\/p>",
+        "slide_two_heading": "<h1>Heading Here<\/h1>",
+        "slide_two_image": "shopify:\/\/shop_images\/oscarFish.png",
+        "slide_two_text": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,<\/p>",
+        "slide_two_button_text": "<p>Click Here<\/p>",
+        "slide_three_heading": "<h1>Heading Here<\/h1>",
+        "slide_three_image": "shopify:\/\/shop_images\/oscarFish.png",
+        "slide_three_text": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,<\/p>",
+        "slide_three_button_text": "<p>Click Here<\/p>"
+      }
     },
     "rich_text": {
       "type": "rich-text",
@@ -100,14 +99,14 @@
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "background-1",
         "show_view_all": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "background-1",
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 28,
         "padding_bottom": 36
       }
@@ -154,8 +153,8 @@
       "type": "video",
       "settings": {
         "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "heading_size": "h1",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
         "color_scheme": "background-1",
@@ -209,9 +208,9 @@
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "swipe_on_mobile": false,
         "color_scheme": "background-1",
         "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
