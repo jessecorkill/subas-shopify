@@ -1,4 +1,5 @@
-@import 'core.scss';
+@import url("material-design-iconic-font.scss");
+
 @import 'custom.scss';
 @import 'responsive.scss';
 @import 'style-customizer.scss';
@@ -11,6 +12,15 @@
 @import 'color/skin-green.scss';
 @import 'color/skin-purple.scss';
 @import 'color/skin-teal.scss';
+
+@import "plugins/animate.min.css";
+@import "plugins/slick.scss";
+@import "plugins/jquery-ui.min.css";
+@import "plugins/meanmenu.min.css";
+@import "plugins/fancybox/jquery.fancybox.css";
+@import "plugins/textanimate.scss";
+@import "plugins/jquery.mb.YTPlayer.min.css";
+
 
 @import 'shortcode/footer.scss';
 @import 'shortcode/header.scss';
