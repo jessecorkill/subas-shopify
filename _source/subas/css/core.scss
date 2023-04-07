@@ -19,15 +19,15 @@ Note: This core style file includes all external plugins css file.
 /* --------------------------------------------------
     Plugins 
 -------------------------------------------------- */
-@import url("plugins/animate.min.css");
-@import url("plugins/slick.scss");
-@import url("plugins/jquery-ui.min.css");
-@import url("plugins/meanmenu.min.css");
-@import url("plugins/fancybox/jquery.fancybox.css");
-@import url("plugins/textanimate.scss");
-@import url("plugins/jquery.mb.YTPlayer.min.css");
+@import "plugins/animate.min.css";
+@import "plugins/slick.scss";
+@import "plugins/jquery-ui.min.css";
+@import "plugins/meanmenu.min.css";
+@import "plugins/fancybox/jquery.fancybox.css";
+@import "plugins/textanimate.scss";
+@import "plugins/jquery.mb.YTPlayer.min.css";
 
 /* --------------------------------------------------
     Shortcode 
 -------------------------------------------------- */
-@import url("shortcode/default.css");
+// @import url("shortcode/default.css");
