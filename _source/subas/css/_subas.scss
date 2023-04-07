@@ -1,23 +1,23 @@
-@import '/_source/subas/css/core.css';
-@import '/_source/subas/css/custom.css';
-@import '/_source/subas/css/material-design-iconic-font.css';
-@import '/_source/subas/css/responsive.css';
-@import '/_source/subas/css/style-customizer.css';
+@import 'core.scss';
+@import 'custom.scss';
+@import 'material-design-iconic-font.scss';
+@import 'responsive.scss';
+@import 'style-customizer.scss';
 
-@import '/_source/subas/css/color/skin-amber.css';
-@import '/_source/subas/css/color/skin-blue-grey.css';
-@import '/_source/subas/css/color/skin-blue.css';
-@import '/_source/subas/css/color/skin-cyan.css';
-@import '/_source/subas/css/color/skin-default.css';
-@import '/_source/subas/css/color/skin-green.css';
-@import '/_source/subas/css/color/skin-purple.css';
-@import '/_source/subas/css/color/skin-teal.css';
+@import 'color/skin-amber.scss';
+@import 'color/skin-blue-grey.scss';
+@import 'color/skin-blue.scss';
+@import 'color/skin-cyan.scss';
+@import 'color/skin-default.scss';
+@import 'color/skin-green.scss';
+@import 'color/skin-purple.scss';
+@import 'color/skin-teal.scss';
 
-@import '/_source/subas/css/plugins/slick.css';
-@import '/_source/subas/css/plugins/textanimate.css';
+@import 'plugins/slick.scss';
+@import 'plugins/textanimate.scss';
 
-@import '/_source/subas/css/shortcode/default.css';
-@import '/_source/subas/css/shortcode/footer.css';
-@import '/_source/subas/css/shortcode/header.css';
-@import '/_source/subas/css/shortcode/shortcodes.css';
-@import '/_source/subas/css/shortcode/slider.css';
+@import 'shortcode/default.scss';
+@import 'shortcode/footer.scss';
+@import 'shortcode/header.scss';
+@import 'shortcode/shortcodes.scss';
+@import 'shortcode/slider.scss';
