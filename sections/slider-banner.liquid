@@ -9,7 +9,7 @@
         <div class="layer-1">
           <div class="slider-img">
             {%- if section.settings.slide_one_image != blank -%}
-              {{ section.settings.slide_one_image }}
+              <img src="{{ section.settings.slide_one_image | img_url: 'large' }}">
             {% endif %}
           </div>
           <div class="slider-info gray-bg">
@@ -31,7 +31,7 @@
         <div class="layer-1">
           <div class="slider-img">
             {%- if section.settings.slide_two_image != blank -%}
-              {{ section.settings.slide_two_image }}
+              <img src="{{ section.settings.slide_two_image | img_url: 'large' }}">
             {% endif %}
           </div>
           <div class="slider-info gray-bg">
@@ -53,7 +53,7 @@
         <div class="layer-1">
           <div class="slider-img">
             {%- if section.settings.slide_three_image != blank -%}
-              {{ section.settings.slide_three_image }}
+              <img src="{{ section.settings.slide_three_image | img_url: 'large' }}">
             {% endif %}
           </div>
           <div class="slider-info gray-bg">
