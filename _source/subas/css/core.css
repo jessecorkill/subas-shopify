@@ -22,6 +22,7 @@ Note: This core style file includes all external plugins css file.
 @import "plugins/meanmenu.min.css";
 @import "plugins/fancybox/jquery.fancybox.css";
 @import "plugins/jquery.mb.YTPlayer.min.css";
+@import url("shortcode/default.css");
 .slick-slider {
   position: relative;
   display: block;
