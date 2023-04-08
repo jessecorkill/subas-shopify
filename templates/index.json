@@ -53,7 +53,7 @@
         "slide_one_heading": "<h1>Heading Here<\/h1>",
         "slide_one_image": "shopify:\/\/shop_images\/oscarFish.png",
         "slide_one_text": "<p>Test<\/p>",
-        "slide_one_button_text": "<p>Click Here<\/p>",
+        "slide_one_button_text": "Click Here",
         "slide_two_heading": "<h1>Heading Here<\/h1>",
         "slide_two_image": "shopify:\/\/shop_images\/discus.jpg",
         "slide_two_text": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,<\/p>",
