@@ -123,7 +123,7 @@
       }
     },
     "suba_featured_collection": {
-      "type": "suba-featured-collection",
+      "type": "suba-featured-products",
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
