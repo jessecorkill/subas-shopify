@@ -1,0 +1,117 @@
+{% comment %}
+Renders a product card
+
+Accepts:
+- card_product_subas: {Object} Product Liquid object (optional)
+- media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
+- image_shape: {String} Image mask to apply to the product image card. Values are "arch", "blob", "chevronleft", "chevronright", "diamond", "parallelogram", and "round". (optional)
+- show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
+- show_vendor: {Boolean} Show the product vendor. Default: false
+- show_rating: {Boolean} Show the product rating. Default: false
+- extend_height: {Boolean} Card height extends to available container space. Default: true (optional)
+- lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+- show_quick_add: {Boolean} Show the quick add button.
+- section_id: {String} The ID of the section that contains this card.
+- horizontal_class: {Boolean} Add a card--horizontal class if set to true. Default: false (optional)
+- horizontal_quick_add: {Boolean} Changes the quick add button styles when set to true. Default: false (optional)
+
+Usage:
+{% render 'card-product', show_vendor: section.settings.show_vendor %}
+{% endcomment %}
+
+<div class="product-item">
+  <div class="product-img">
+    <a href="single-product.html">
+      <img src="{{ card_product_subas.featured_media | image_url: width: 533 }}" alt="" />
+    </a>
+  </div>
+  <div class="product-info">
+    <h6 class="product-title">
+      <a href="single-product.html">{{ card_product_subas.title | escape }}</a>
+    </h6>
+
+
+
+
+    
+    {%- if show_rating and card_product_subas.metafields.reviews.rating.value != blank -%}
+
+    {% liquid
+    assign rating_decimal = 0
+    assign decimal = card_product_subas.metafields.reviews.rating.value.rating | modulo: 1
+    if decimal >= 0.3 and decimal <= 0.7
+      assign rating_decimal = 0.5
+    elsif decimal > 0.7
+      assign rating_decimal = 1
+    endif
+  %}
+  
+    <div class="pro-rating">
+      {% for i in (0..4) %}
+        {% if  card_product_subas.metafields.reviews.rating.value >= i +.5 %}
+          {% if card_product_subas.metafields.reviews.rating.value > i +.5 %}
+            {% render 'star-subas' %}
+          {% else %}
+            {% render 'star-half-subas' %}
+        {% else %}
+          {% render 'star-empty-subas' %}
+        {% endif %}
+
+      {% endif %}
+    {% endfor %}
+        
+    </div>
+    {%- endif -%}
+
+
+
+    
+    <h3 class="pro-price">{{ money_price }}</h3>
+
+
+
+    <ul class="action-button">
+
+
+
+      <li>
+        <a href="#" title="Wishlist">
+          <i class="zmdi zmdi-favorite"></i>
+        </a>
+      </li>
+
+
+      <li>
+        <a
+          href="#"
+          data-bs-toggle="modal"
+          data-bs-target="#productModal"
+          title="Quickview">
+          <i class="zmdi zmdi-zoom-in"></i>
+        </a>
+      </li>
+
+
+
+      <li>
+        <a href="#" title="Compare">
+          <i class="zmdi zmdi-refresh"></i>
+        </a>
+      </li>
+
+
+
+      <li>
+        <a href="#" title="Add to cart">
+          <i class="zmdi zmdi-shopping-cart-plus"></i>
+        </a>
+      </li>
+
+
+
+    </ul>
+
+
+
+  </div>
+</div>
