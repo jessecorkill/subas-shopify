@@ -2,7 +2,7 @@
 Renders a product card
 
 Accepts:
-- card_product: {Object} Product Liquid object (optional)
+- card_product_subas: {Object} Product Liquid object (optional)
 - media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
 - image_shape: {String} Image mask to apply to the product image card. Values are "arch", "blob", "chevronleft", "chevronright", "diamond", "parallelogram", and "round". (optional)
 - show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
@@ -22,23 +22,23 @@ Usage:
 <div class="product-item">
   <div class="product-img">
     <a href="single-product.html">
-      <img src="{{ card_product.featured_media | image_url: width: 533 }}" alt="" />
+      <img src="{{ card_product_subas.featured_media | image_url: width: 533 }}" alt="" />
     </a>
   </div>
   <div class="product-info">
     <h6 class="product-title">
-      <a href="single-product.html">{{ card_product.title | escape }}</a>
+      <a href="single-product.html">{{ card_product_subas.title | escape }}</a>
     </h6>
 
 
 
 
 
-    {%- if show_rating and card_product.metafields.reviews.rating.value != blank -%}
+    {%- if show_rating and card_product_subas.metafields.reviews.rating.value != blank -%}
 
     {% liquid
     assign rating_decimal = 0
-    assign decimal = card_product.metafields.reviews.rating.value.rating | modulo: 1
+    assign decimal = card_product_subas.metafields.reviews.rating.value.rating | modulo: 1
     if decimal >= 0.3 and decimal <= 0.7
       assign rating_decimal = 0.5
     elsif decimal > 0.7
@@ -48,8 +48,8 @@ Usage:
   
     <div class="pro-rating">
       {% for i in (0..4) %}
-        {% if  card_product.metafields.reviews.rating.value >= i +.5 %}
-          {% if card_product.metafields.reviews.rating.value > i +.5 %}
+        {% if  card_product_subas.metafields.reviews.rating.value >= i +.5 %}
+          {% if card_product_subas.metafields.reviews.rating.value > i +.5 %}
             {% render 'star-subas' %}
           {% else %}
             {% render 'star-half-subas' %}
