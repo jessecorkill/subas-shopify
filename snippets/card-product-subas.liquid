@@ -48,8 +48,8 @@ Usage:
   
     <div class="pro-rating">
       {% for i in (0..4) %}
-        {% if  card_product_subas.metafields.reviews.rating.value >= i +.5 %}
-          {% if card_product_subas.metafields.reviews.rating.value > i +.5 %}
+        {% if  card_product_subas.metafields.reviews.rating.value >= (i +.5) %}
+          {% if card_product_subas.metafields.reviews.rating.value > (i +.5) %}
             {% render 'star-subas' %}
           {% else %}
             {% render 'star-half-subas' %}
