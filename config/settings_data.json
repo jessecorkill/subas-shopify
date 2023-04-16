@@ -136,6 +136,14 @@
           "color_scheme": "background-1"
         }
       }
+    },
+    "blocks": {
+      "judgeme_core_96ebb971": {
+        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {
+        }
+      }
     }
   },
   "presets": {
