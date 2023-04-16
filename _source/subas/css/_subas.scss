@@ -1,26 +1,26 @@
-@import 'material-design-iconic-font.scss';
-@import 'responsive.scss';
-@import 'style-customizer.scss';
+@use 'material-design-iconic-font.scss';
+@use 'responsive.scss';
+@use 'style-customizer.scss';
 
-@import 'color/skin-amber.scss';
-@import 'color/skin-blue-grey.scss';
-@import 'color/skin-blue.scss';
-@import 'color/skin-cyan.scss';
-@import 'color/skin-default.scss';
-@import 'color/skin-green.scss';
-@import 'color/skin-purple.scss';
-@import 'color/skin-teal.scss';
+@use 'color/skin-amber.scss';
+@use 'color/skin-blue-grey.scss';
+@use 'color/skin-blue.scss';
+@use 'color/skin-cyan.scss';
+@use 'color/skin-default.scss';
+@use 'color/skin-green.scss';
+@use 'color/skin-purple.scss';
+@use 'color/skin-teal.scss';
 
-@import "plugins/slick.scss";
-@import "plugins/fancybox/jquery.fancybox.scss";
-@import "plugins/textanimate.scss";
+@use "plugins/slick.scss";
+@use "plugins/fancybox/jquery.fancybox.scss";
+@use "plugins/textanimate.scss";
 
-@import 'shortcode/default.scss';
-@import 'shortcode/footer.scss';
-@import 'shortcode/header.scss';
-@import 'shortcode/slider.scss';
+@use 'shortcode/default.scss';
+@use 'shortcode/footer.scss';
+@use 'shortcode/header.scss';
+@use 'shortcode/slider.scss';
 
-@import '../lib/css/nivo-slider.scss';
+@use '../lib/css/nivo-slider.scss';
 
 
 
