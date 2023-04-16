@@ -32,11 +32,9 @@ Usage:
 
 
 
-
-    
     {%- if show_rating and card_product_subas.metafields.reviews.rating.value != blank -%}
 
-    {% liquid
+      {% liquid
     assign rating_decimal = 0
     assign decimal = card_product_subas.metafields.reviews.rating.value.rating | modulo: 1
     if decimal >= 0.3 and decimal <= 0.7
@@ -45,25 +43,16 @@ Usage:
       assign rating_decimal = 1
     endif
   %}
-  
-    <div class="pro-rating">
-      {% for i in (0..4) %}
-        {% if  card_product_subas.metafields.reviews.rating.value >= i +.5 %}
-          {% if card_product_subas.metafields.reviews.rating.value > i +.5 %}
-            {% render 'star-subas' %}
-          {% else %}
-            {% render 'star-half-subas' %}
-        {% else %}
-          {% render 'star-empty-subas' %}
-        {% endif %}
 
-      {% endfor %}
-    </div>
+      <div class="pro-rating">
+        {% if card_product.metafields.reviews.rating.value >=.5 %}
+          {% render 'star-subas' %}
+        {% endif %}
+      </div>
     {%- endif -%}
 
 
 
-    
     <h3 class="pro-price">{{ money_price }}</h3>
 
 
