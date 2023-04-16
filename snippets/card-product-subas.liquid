@@ -21,13 +21,13 @@ Usage:
 
 <div class="product-item">
   <div class="product-img">
-    <a href="single-product.html">
+    <a href="{% card_product.url %}">
       <img src="{{ card_product_subas.featured_media | image_url: width: 533 }}" alt="" />
     </a>
   </div>
   <div class="product-info">
     <h6 class="product-title">
-      <a href="single-product.html">{{ card_product_subas.title | escape }}</a>
+      <a href="{% card_product.url %}">{{ card_product_subas.title | escape }}</a>
     </h6>
 
 
@@ -53,7 +53,7 @@ Usage:
 
 
 
-    <h3 class="pro-price">{{ money_price }}</h3>
+    <h3 class="pro-price">{{ card_product.price }}</h3>
 
 
 
