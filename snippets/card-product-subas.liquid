@@ -45,7 +45,7 @@ Usage:
   %}
 
       <div class="pro-rating">
-        {% if card_product.metafields.reviews.rating.value >= '.5' %}
+        {% if card_product_subas.metafields.reviews.rating.value >= '.5' %}
           {% render 'star-subas' %}
         {% endif %}
       </div>
@@ -53,7 +53,7 @@ Usage:
 
 
 
-    <h3 class="pro-price">{{ card_product.price }}</h3>
+    <h3 class="pro-price">{{ card_product_subas.price }}</h3>
 
 
 
