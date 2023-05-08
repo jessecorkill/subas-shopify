@@ -429,7 +429,14 @@
         media="print"
         onload="this.media='all'">
     {%- endif -%}
-
+    
+      <link
+    rel="preload"
+    as="font"
+    href="{{ 'Material-Design-Iconic-Font' | asset_url }}"
+    type="font/woff2"
+    crossorigin>
+    
     <link
       rel="stylesheet"
       href="{{ 'bootstrap.min.css' | asset_url }}"
