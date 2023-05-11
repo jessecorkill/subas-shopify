@@ -8,11 +8,7 @@
   font-weight: normal;
   font-style: normal;
 } */
-@font-face {
-  font-family: "Material-Design-Iconic-Font";
-  src: url("Material-Design-Iconic-Font.woff") format("woff"),
-  url("Material-Design-Iconic-Font.woff") format("woff");
-}
+
 
 .zmdi {
   display: inline-block;
