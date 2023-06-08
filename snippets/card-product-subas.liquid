@@ -72,8 +72,15 @@ Usage:
     {%- endif -%}
 
 
-
-    <h3 class="pro-price">{{ card_product_subas.price.from_price_html | t: price: money_price }}</h3>
+    {%- if card_product.available == false -%}
+      <h3 id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}">
+        {{- 'products.product.sold_out' | t -}}
+      </h3>
+    {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+      <h3 id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">
+        {{- 'products.product.on_sale' | t -}}
+      </h3>
+    {%- endif -%}
 
 
 
