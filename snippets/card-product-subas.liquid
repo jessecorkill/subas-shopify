@@ -72,8 +72,9 @@ Usage:
     {%- endif -%}
 
 
-
-    <h3 class="pro-price">${{ card_product_subas.price | divided_by: 100.00 }}</h3>
+    {%- if card_product_subas.price | modulo: 1 -%}
+      <h3 class="pro-price">{{ card_product_subas.price }}</h3>
+    {%- endif -%}
 
 
 
