@@ -42,7 +42,10 @@ Usage:
 <div class="product-item">
   <div class="product-img">
     <a href="{{ card_product_subas.url }}">
-      <img src="{{ card_product_subas.featured_media | image_url: width: 533 }}" alt="" />
+      <img
+        loading="lazy"
+        src="{{ card_product_subas.featured_media | image_url: width: 533 }}"
+        alt="" />
     </a>
   </div>
   <div class="product-info">
@@ -72,7 +75,7 @@ Usage:
     {%- endif -%}
 
 
-      <h3 class="pro-price">${{ card_product_subas.price | money_without_currency | replace:',','.' }}</h3>
+    <h3 class="pro-price">${{ card_product_subas.price | money_without_currency | replace: ',', '.' }}</h3>
 
 
     <ul class="action-button">

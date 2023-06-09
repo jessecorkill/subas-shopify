@@ -3,8 +3,8 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="section-title text-start mb-40">
-        <h2 class="uppercase">Featured product</h2>
-        <h6>There are many variations of passages of brands available,</h6>
+        <h2 class="uppercase">{{ section.settings.title }}</h2>
+        <h6>{{ section.settings.description }}</h6>
       </div>
       <div class="suba-featured-products">
         <div class="active-suba-featured-products slick-arrow-2">
@@ -28,33 +28,15 @@
 
 {% schema %}
   {
-    "name": "t:sections.suba-suba-featured-products.name",
+    "name": "Featured Products",
     "tag": "div",
-    "class": "suba-suba-featured-products-section mb-50",
+    "class": "suba-featured-products-section mb-50",
     "settings": [
       {
         "type": "inline_richtext",
         "id": "title",
         "default": "Featured collection",
-        "label": "t:sections.suba-suba-featured-products.settings.title.label"
-      },
-      {
-        "type": "select",
-        "id": "heading_size",
-        "options": [
-          {
-            "value": "h2",
-            "label": "t:sections.all.heading_size.options__1.label"
-          }, {
-            "value": "h1",
-            "label": "t:sections.all.heading_size.options__2.label"
-          }, {
-            "value": "h0",
-            "label": "t:sections.all.heading_size.options__3.label"
-          }
-        ],
-        "default": "h1",
-        "label": "t:sections.all.heading_size.label"
+        "label": "t:sections.suba-featured-products.settings.title.label"
       },
       {
         "type": "richtext",
@@ -66,24 +48,8 @@
         "id": "show_description",
         "label": "Show Description?",
         "default": false
-      }, {
-        "type": "select",
-        "id": "description_style",
-        "label": "Description Style",
-        "options": [
-          {
-            "value": "body",
-            "label": "Body"
-          }, {
-            "value": "subtitle",
-            "label": "Subtitle"
-          }, {
-            "value": "uppercase",
-            "label": "Uppercase"
-          }
-        ],
-        "default": "body"
-      }, {
+      },
+      {
         "type": "collection",
         "id": "collection",
         "label": "Collection"
@@ -96,72 +62,10 @@
         "default": 4,
         "label": "Products to Show"
       }, {
-        "type": "range",
-        "id": "columns_desktop",
-        "min": 1,
-        "max": 5,
-        "step": 1,
-        "default": 4,
-        "label": "Column Count on Desktop"
-      }, {
-        "type": "checkbox",
-        "id": "full_width",
-        "label": "Full Width",
-        "default": false
-      }, {
-        "type": "checkbox",
-        "id": "show_view_all",
-        "default": true,
-        "label": "Show View All"
-      }, {
-        "type": "select",
-        "id": "view_all_style",
-        "label": "View All Style",
-        "options": [
-          {
-            "value": "link",
-            "label": "Link"
-          }, {
-            "value": "outline",
-            "label": "Outline"
-          }, {
-            "value": "solid",
-            "label": "Solid"
-          }
-        ],
-        "default": "solid"
-      }, {
         "type": "checkbox",
         "id": "enable_desktop_slider",
-        "label": "t:sections.suba-featured-products.settings.enable_desktop_slider.label",
+        "label": "Enable Desktop Slider",
         "default": false
-      }, {
-        "type": "select",
-        "id": "color_scheme",
-        "options": [
-          {
-            "value": "accent-1",
-            "label": "t:sections.all.colors.accent_1.label"
-          },
-          {
-            "value": "accent-2",
-            "label": "t:sections.all.colors.accent_2.label"
-          },
-          {
-            "value": "background-1",
-            "label": "t:sections.all.colors.background_1.label"
-          },
-          {
-            "value": "background-2",
-            "label": "t:sections.all.colors.background_2.label"
-          }, {
-            "value": "inverse",
-            "label": "t:sections.all.colors.inverse.label"
-          }
-        ],
-        "default": "background-1",
-        "label": "t:sections.all.colors.label",
-        "info": "t:sections.all.colors.has_cards_info"
       }, {
         "type": "header",
         "content": "t:sections.suba-featured-products.settings.header.content"
@@ -188,52 +92,42 @@
         "options": [
           {
             "value": "default",
-            "label": "t:sections.all.image_shape.options__1.label"
+            "label": "Default"
           },
           {
             "value": "arch",
-            "label": "t:sections.all.image_shape.options__2.label"
+            "label": "Arch"
           },
           {
             "value": "blob",
-            "label": "t:sections.all.image_shape.options__3.label"
+            "label": "Blob"
           },
           {
             "value": "chevronleft",
-            "label": "t:sections.all.image_shape.options__4.label"
+            "label": "Chevron Left"
           }, {
             "value": "chevronright",
-            "label": "t:sections.all.image_shape.options__5.label"
+            "label": "Chevron Right"
           }, {
             "value": "diamond",
-            "label": "t:sections.all.image_shape.options__6.label"
+            "label": "Diamond"
           }, {
             "value": "parallelogram",
-            "label": "t:sections.all.image_shape.options__7.label"
+            "label": "Parallelogram"
           }, {
             "value": "round",
-            "label": "t:sections.all.image_shape.options__8.label"
+            "label": "Round"
           }
         ],
         "default": "default",
-        "label": "t:sections.all.image_shape.label",
-        "info": "t:sections.all.image_shape.info"
-      }, {
-        "type": "checkbox",
-        "id": "show_secondary_image",
-        "default": false,
-        "label": "t:sections.suba-featured-products.settings.show_secondary_image.label"
-      }, {
-        "type": "checkbox",
-        "id": "show_vendor",
-        "default": false,
-        "label": "t:sections.suba-featured-products.settings.show_vendor.label"
+        "label": "Image Shape",
+        "info": ""
       }, {
         "type": "checkbox",
         "id": "show_rating",
         "default": false,
-        "label": "t:sections.suba-featured-products.settings.show_rating.label",
-        "info": "t:sections.suba-featured-products.settings.show_rating.info"
+        "label": "Show Rating",
+        "info": ""
       }, {
         "type": "checkbox",
         "id": "enable_quick_add",
