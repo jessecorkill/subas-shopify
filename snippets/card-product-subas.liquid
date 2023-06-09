@@ -72,7 +72,7 @@ Usage:
     {%- endif -%}
 
 
-      <h3 class="pro-price">{{ card_product_subas.price }}</h3>
+      <h3 class="pro-price">{{ card_product_subas.price | money_without_currency | replace:',','.' }}</h3>
 
 
     <ul class="action-button">
