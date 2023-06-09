@@ -129,7 +129,7 @@
         "heading_size": "h2",
         "description": "",
         "show_description": false,
-        "description_style": "body",
+        "description_style": "subtitle",
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
