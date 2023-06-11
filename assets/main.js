@@ -108,7 +108,7 @@
 	/*------------------------------------
 			4.3 Active Featured Product
 	----------------------------------- */  
-    $('.active-featured-product').slick({
+    $('.active-suba-featured-products').slick({
         speed: 700,
         arrows: true,
         dots: false,

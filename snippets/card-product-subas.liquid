@@ -25,18 +25,7 @@ Usage:
   else
     assign target = product
   endif
-
-  assign compare_at_price = target.compare_at_price
-  assign price = target.price | default: 1999
-  assign available = target.available | default: false
-  assign money_price = price | money
-  if settings.currency_code_enabled
-    assign money_price = price | money_with_currency
-  endif
-
-  if target == product and product.price_varies
-    assign money_price = 'products.product.price.from_price_html' | t: price: money_price
-  endif
+  
 -%}
 
 <div class="product-item">
@@ -53,16 +42,6 @@ Usage:
 
 
     {%- if show_rating and card_product_subas.metafields.reviews.rating.value != blank -%}
-
-      {% liquid
-    assign rating_decimal = 0
-    assign decimal = card_product_subas.metafields.reviews.rating.value.rating | modulo: 1
-    if decimal >= 0.3 and decimal <= 0.7
-      assign rating_decimal = 0.5
-    elsif decimal > 0.7
-      assign rating_decimal = 1
-    endif
-  %}
 
       <div class="pro-rating">
         {% if card_product_subas.metafields.reviews.rating.value >= '.5' %}
