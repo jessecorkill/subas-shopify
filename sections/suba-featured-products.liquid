@@ -7,7 +7,7 @@
         <h6>{{ section.settings.description }}</h6>
       </div>
       <div class="suba-featured-products">
-        <div class="active-suba-featured-products slick-arrow-2">
+        <div class="active-featured-product slick-arrow-2">
           {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
             {% render 'card-product-subas' 
              , card_product_subas: product,
