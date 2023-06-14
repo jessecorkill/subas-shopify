@@ -1,0 +1,24 @@
+{
+    "sections": {
+        "suba_breadcrumbs": {
+            "type": "suba-breadcrumbs",
+            "settings":{
+                
+            }
+        },
+      "form": {
+        "type": "contact-form",
+        "settings": {
+          "heading": "",
+          "heading_size": "h1",
+          "color_scheme": "background-1",
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      }
+    },
+    "order": [
+      "main",
+      "form"
+    ]
+  }

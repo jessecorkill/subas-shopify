@@ -1,0 +1,44 @@
+<!-- BREADCRUMBS SETCTION START -->
+<div class="breadcrumbs overlay-bg" style="background:#f6f6f6 url({{ section.settings.background_image | img_url: 'large' }}) no-repeat scroll center center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumbs-inner">
+          <h1 class="breadcrumbs-title">{{ section.settings.title }}</h1>
+          <ul class="breadcrumb-list">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>{{ section.settings.title }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- BREADCRUMBS SETCTION END -->
+
+{% schema %}
+  {
+    "name": "Breadcrumb",
+    "tag": "div",
+    "class": "breadcrumbs-section plr-200 mb-80 section",
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "title",
+        "default": "Title Here",
+        "label": "Title"
+      }, {
+        "id": "background_image",
+        "type": "image_picker",
+        "label": "Background Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "suba_breadcrumb"
+      }
+    ]
+  }
+{% endschema %}
