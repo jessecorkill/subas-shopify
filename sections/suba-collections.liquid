@@ -10,7 +10,8 @@
         <div class="by-brand-product">
           <div class="active-by-brand slick-arrow-2">
             {%- for collection in collections limit: section.settings.collections_to_show -%}
-              {% render 'card-collection-subas' %}
+              {% render 'card-collection-subas'
+               , card_collection_subas: block.settings.collection %}
             {% endfor %}
           </div>
         </div>
