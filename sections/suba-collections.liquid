@@ -1,0 +1,50 @@
+<!-- BY BRAND SECTION START-->
+<div class="by-brand-section mb-80">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-title text-start mb-40">
+          <h2 class="uppercase">Shop Live Fish</h2>
+          <h6>There are many variations of passages of brands available,</h6>
+        </div>
+        <div class="by-brand-product">
+          <div class="active-by-brand slick-arrow-2">
+            {%- for collection in collections limit: section.settings.collections_to_show -%}
+              {% render 'card-collection-subas' %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- BY BRAND SECTION END -->
+
+{% schema %}
+  {
+    "name": "Collections",
+    "tag": "div",
+    "class": "by-brand-section mb-80",
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "title",
+        "default": "Title Here",
+        "label": "Title"
+      }, {
+        "type": "range",
+        "id": "collections_to_show",
+        "min": 2,
+        "max": 25,
+        "step": 1,
+        "default": 4,
+        "label": "Collections to Show"
+      }
+    ],
+    "presets": [
+      {
+        "name": "suba_collections"
+      }
+    ]
+  }
+{% endschema %}
