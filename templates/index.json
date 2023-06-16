@@ -94,7 +94,7 @@
         "padding_bottom": 0
       }
     },
-    "suba-collections":{
+    "suba_collections":{
       "type": "suba-collections",
       "settings":{
         "title": "Collections (suba)"
