@@ -51,7 +51,7 @@
       "type": "suba-collections",
       "settings": {
         "title": "Collections (suba)",
-        "collections_to_show": 7
+        "collections_to_show": 9
       }
     },
     "suba_featured_collection": {
