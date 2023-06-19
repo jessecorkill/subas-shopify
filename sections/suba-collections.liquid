@@ -9,9 +9,11 @@
         </div>
         <div class="by-brand-product">
           <div class="active-by-brand slick-arrow-2">
-            {% for collection in collections limit: section.settings.collections_to_show %}
-              {% render 'card-collection-subas' 
-               , card_collection_subas: block.settings.collection %}
+            {%- for block in section.blocks -%}
+              {% for collection in collections limit: section.settings.collections_to_show %}
+                {% render 'card-collection-subas' 
+                 , card_collection_subas: block.settings.collection %}
+              {% endfor %}
             {% endfor %}
           </div>
         </div>
@@ -42,10 +44,31 @@
         "label": "Collections to Show"
       }
     ],
+    "blocks": [
+      {
+        "type": "featured_collection",
+        "name": "t:sections.collection-list.blocks.featured_collection.name",
+        "settings": [
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+          }
+        ]
+      }
+    ],
     "presets": [
       {
-        "name": "suba_collections"
-
+        "name": "suba_collections",
+        "blocks": [
+          {
+            "type": "featured_collection"
+          }, {
+            "type": "featured_collection"
+          }, {
+            "type": "featured_collection"
+          }
+        ]
       }
     ]
 
