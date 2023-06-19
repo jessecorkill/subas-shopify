@@ -47,10 +47,11 @@
         "padding_bottom": 0
       }
     },
-    "suba_collections":{
+    "suba_collections": {
       "type": "suba-collections",
-      "settings":{
-        "title": "Collections (suba)"
+      "settings": {
+        "title": "Collections (suba)",
+        "collections_to_show": 7
       }
     },
     "suba_featured_collection": {
