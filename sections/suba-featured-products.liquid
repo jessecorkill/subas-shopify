@@ -1,0 +1,129 @@
+<!-- FEATURED PRODUCT SECTION START -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="section-title text-start mb-40">
+        <h2 class="uppercase">{{ section.settings.title }}</h2>
+        <h6>{{ section.settings.description }}</h6>
+      </div>
+      <div class="suba-featured-products">
+        <div class="active-featured-product slick-arrow-2">
+          {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+            {% render 'card-product-subas' 
+             , card_product_subas: product,
+             media_aspect_ratio: section.settings.image_ratio,
+             image_shape: section.settings.image_shape,
+             show_secondary_image: section.settings.show_secondary_image,
+             show_vendor: section.settings.show_vendor,
+             show_rating: section.settings.show_rating,
+             show_quick_add: section.settings.enable_quick_add,
+             section_id: section.id %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FEATURED PRODUCT SECTION END -->
+
+{% schema %}
+  {
+    "name": "Featured Products",
+    "tag": "div",
+    "class": "suba-featured-products-section mb-50",
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "title",
+        "default": "Featured collection",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_description",
+        "label": "Show Description?",
+        "default": false
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      }, {
+        "type": "range",
+        "id": "products_to_show",
+        "min": 2,
+        "max": 25,
+        "step": 1,
+        "default": 4,
+        "label": "Products to Show"
+      }, {
+        "type": "header",
+        "content": "Header Content"
+      }, {
+        "type": "checkbox",
+        "id": "show_rating",
+        "default": false,
+        "label": "Show Rating",
+        "info": "Displays product rating in the form of stars."
+      }, {
+        "type": "checkbox",
+        "id": "enable_quick_add",
+        "default": false,
+        "label": "Enable Quick Add"
+      }, {
+        "type": "header",
+        "content": "t:sections.suba-featured-products.settings.header_mobile.content"
+      }, {
+        "type": "select",
+        "id": "columns_mobile",
+        "default": "2",
+        "label": "Mobile Columns",
+        "options": [
+          {
+            "value": "1",
+            "label": "1"
+          }, {
+            "value": "2",
+            "label": "2"
+          }
+        ]
+      }, {
+        "type": "checkbox",
+        "id": "swipe_on_mobile",
+        "default": false,
+        "label": "Swipe on Mobile"
+      }, {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      }, {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "Padding Top",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "Padding Bottom",
+        "default": 36
+      }
+    ],
+    "presets": [
+      {
+        "name": "suba_featured_products"
+      }
+    ]
+  }
+{% endschema %}

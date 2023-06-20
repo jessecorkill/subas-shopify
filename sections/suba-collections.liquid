@@ -1,0 +1,81 @@
+<!-- BY BRAND SECTION START-->
+<div class="by-brand-section mb-80">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-title text-start mb-40">
+          <h2 class="uppercase">{{ section.settings.title }}</h2>
+          <h6>{{ section.settings.description }}</h6>
+        </div>
+        <div class="by-brand-product">
+          <div class="active-by-brand slick-arrow-2">
+            {%- for block in section.blocks -%}
+              {% for collection in collections limit: section.settings.collections_to_show %}
+                {% render 'card-collection-subas' 
+                 , card_collection_subas: block.settings.collection %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- BY BRAND SECTION END -->
+
+{% schema %}
+  {
+    "name": "Collections",
+    "tag": "div",
+    "class": "by-brand-section mb-80",
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "title",
+        "default": "Title Here",
+        "label": "Title"
+      }, {
+        "type": "inline_richtext",
+        "id": "description",
+        "default": "Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.",
+        "label": "Description"
+      }, {
+        "type": "range",
+        "id": "collections_to_show",
+        "min": 2,
+        "max": 25,
+        "step": 1,
+        "default": 4,
+        "label": "Collections to Show"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "featured_collection",
+        "name": "t:sections.collection-list.blocks.featured_collection.name",
+        "settings": [
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "suba_collections",
+        "blocks": [
+          {
+            "type": "featured_collection"
+          }, {
+            "type": "featured_collection"
+          }, {
+            "type": "featured_collection"
+          }
+        ]
+      }
+    ]
+
+  }
+{% endschema %}

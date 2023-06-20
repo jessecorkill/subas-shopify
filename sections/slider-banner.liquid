@@ -1,3 +1,5 @@
+{{ 'slider.css' | asset_url | stylesheet_tag }}
+
 <!-- START SLIDER AREA -->
 <div class="container-fluid">
   <div class="slider-content">
@@ -7,7 +9,7 @@
         <div class="layer-1">
           <div class="slider-img">
             {%- if section.settings.slide_one_image != blank -%}
-              {{ section.settings.slide_one_image }}
+              <img src="{{ section.settings.slide_one_image | img_url: 'large' }}">
             {% endif %}
           </div>
           <div class="slider-info gray-bg">
@@ -28,7 +30,9 @@
       <div class="col-lg-12">
         <div class="layer-1">
           <div class="slider-img">
-            <img src="img/slider/slider-1/2.jpg" alt="">
+            {%- if section.settings.slide_two_image != blank -%}
+              <img src="{{ section.settings.slide_two_image | img_url: 'large' }}">
+            {% endif %}
           </div>
           <div class="slider-info gray-bg">
             <div class="slider-info-inner">
@@ -48,7 +52,9 @@
       <div class="col-lg-12">
         <div class="layer-1">
           <div class="slider-img">
-            <img src="img/slider/slider-1/1.jpg" alt="">
+            {%- if section.settings.slide_three_image != blank -%}
+              <img src="{{ section.settings.slide_three_image | img_url: 'large' }}">
+            {% endif %}
           </div>
           <div class="slider-info gray-bg">
             <div class="slider-info-inner">
@@ -94,9 +100,9 @@
       },
       {
         "id": "slide_one_button_text",
-        "type": "richtext",
+        "type": "html",
         "label": "Slide Button Text",
-        "default": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>"
+        "default": "Click here"
       }, {
         "id": "slide_two_heading",
         "type": "richtext",
@@ -113,9 +119,9 @@
         "default": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>"
       }, {
         "id": "slide_two_button_text",
-        "type": "richtext",
+        "type": "html",
         "label": "Slide Button Text",
-        "default": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>"
+        "default": "Click here"
       }, {
         "id": "slide_three_heading",
         "type": "richtext",
@@ -132,9 +138,9 @@
         "default": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>"
       }, {
         "id": "slide_three_button_text",
-        "type": "richtext",
+        "type": "html",
         "label": "Slide Button Text",
-        "default": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>"
+        "default": "Click here"
       }
 
     ],
