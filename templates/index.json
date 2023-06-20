@@ -68,8 +68,9 @@
         "73353be3-d531-4b37-a25a-3cbc9b561d67"
       ],
       "settings": {
-        "title": "Collections (suba)",
-        "collections_to_show": 9
+        "title": "Our Brands",
+        "description": "Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.",
+        "collections_to_show": 8
       }
     },
     "suba_featured_collection": {
@@ -80,8 +81,6 @@
         "show_description": true,
         "collection": "all",
         "products_to_show": 8,
-        "image_ratio": "adapt",
-        "image_shape": "default",
         "show_rating": true,
         "enable_quick_add": false,
         "columns_mobile": "2",
